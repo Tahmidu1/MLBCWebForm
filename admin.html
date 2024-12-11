@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="admin.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <img src="BM Logo.jpg" alt="Logo" class="logo">
+            <h1 class="logo-text">Admin Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-wrapper">
+            <h2>Manage Documents</h2>
+            <div class="admin-controls">
+                <label for="clientType">Select Client Type:</label>
+                <select id="clientType">
+                    <option value="Individual">Individual</option>
+                    <option value="Company">Company</option>
+                    <option value="Trust">Trust</option>
+                </select>
+
+                <input type="text" id="newDocumentName" placeholder="Enter new document name">
+                <button id="addDocument" class="btn">Add Document</button>
+            </div>
+
+            <h3>Current Documents</h3>
+            <div id="documentList">
+                <!-- Dynamically generated document list will appear here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Admin Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

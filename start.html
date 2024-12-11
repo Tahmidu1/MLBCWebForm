@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Page - Contract Agreement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="start.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <img src="BM Logo.jpg" alt="Logo" class="logo">
+            <h1 class="logo-text">Welcome to Baker McKenzie</h1>
+        </div>
+    </header>
+
+    <main class="contract-container">
+        <div class="contract-wrapper">
+            <h2>Contract Agreement</h2>
+            <p class="contract-text">
+                By proceeding, you agree to the terms and conditions outlined in this contract. Please read the agreement carefully and provide your electronic signature below to continue.
+            </p>
+
+            <div class="contract-content">
+                <h3>Example Contract:</h3>
+                <p>
+                    This agreement is entered into by the client ("You") and Baker McKenzie ("Company"). By signing, you acknowledge and agree to provide accurate information and documentation during the onboarding process. Your cooperation ensures compliance with all legal and regulatory requirements.
+                </p>
+                <p>
+                    For any inquiries regarding this agreement, please contact our legal team at support@bakermckenzie.com.
+                </p>
+            </div>
+
+            <!-- Signature Area -->
+            <div class="signature-area">
+                <label for="signature">Draw Your Signature:</label>
+                <canvas id="signatureCanvas" width="500" height="200" class="signature-canvas"></canvas>
+                <button id="clearSignature" class="btn clear-btn">Clear</button>
+            </div>
+
+            <!-- Continue Button -->
+            <button id="continueBtn" class="btn submit-btn">Sign and Continue</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Baker McKenzie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

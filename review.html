@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="review.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <img src="BM Logo.jpg" alt="Logo" class="logo">
+            <h1 class="logo-text">Baker McKenzie</h1>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-wrapper text-center">
+            <h2>Thank You!</h2>
+            <p>Your form has been successfully submitted and is now under review.</p>
+            <p>You will be contacted with further information soon.</p>
+
+            <!-- Display Submitted Data -->
+            <h3>Submitted Details</h3>
+            <p><strong>Full Name:</strong> <span id="submittedName"></span></p>
+            <p><strong>Email:</strong> <span id="submittedEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="submittedPhone"></span></p>
+            <p><strong>Client Type:</strong> <span id="submittedClientType"></span></p>
+
+            <a href="multi-step-form.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Baker McKenzie. All rights reserved.</p>
+    </footer>
+</body>
+</html>
