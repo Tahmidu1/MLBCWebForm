@@ -6,84 +6,79 @@
     <title>Multi-Step Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header class="header">
-        <div class="container flex justify-between items-center">
+        <div class="container">
             <img src="BM Logo.jpg" alt="Logo" class="logo">
-            <h1 class="logo-text">Baker McKenzie Client Onboarding</h1>
+            <h1 class="logo-text">Baker McKenzie Onboarding</h1>
+            <div class="language-selector">
+                <label for="languageDropdown">Language:</label>
+                <select id="languageDropdown">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </div>
         </div>
     </header>
-
     <main class="form-container">
         <div class="form-wrapper">
-            <!-- Progress Bar -->
             <div class="progress-bar">
-                <div class="progress-step progress-step-active" data-title="User"></div>
-                <div class="progress-step" data-title="Documents"></div>
-                <div class="progress-step" data-title="Review"></div>
+                <div class="progress-step" data-title="User Details"></div>
+                <div class="progress-step" data-title="Upload Documents"></div>
+                <div class="progress-step" data-title="Review & Submit"></div>
             </div>
-
-            <!-- Multi-Step Form -->
-            <form id="multiStepForm" onsubmit="redirectToReview(event)">
-                <!-- Step 1: User Details -->
+            <form id="multiStepForm" enctype="multipart/form-data">
                 <div class="form-step form-step-active">
-                    <h2>User</h2>
+                    <h2 data-i18n="welcomeMessage">Welcome to the Multi-Step Form</h2>
                     <div class="input-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        <label for="fullName" data-i18n="fullNameLabel">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
                     </div>
                     <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <label for="email" data-i18n="emailLabel">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="input-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        <label for="phone" data-i18n="phoneLabel">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="input-group">
-                        <label for="clientType">Client Type</label>
+                        <label for="clientType" data-i18n="clientTypeLabel">Client Type</label>
                         <select id="clientType" name="clientType" required>
                             <option value="Individual">Individual</option>
                             <option value="Company">Company</option>
                             <option value="Trust">Trust</option>
                         </select>
                     </div>
-                    <button type="button" class="btn next-btn">Next</button>
+                    <button type="button" class="btn next-btn" data-i18n="nextButton">Next</button>
                 </div>
-
-                <!-- Step 2: Dynamic Document Section -->
                 <div class="form-step">
-                    <h2>Documents</h2>
+                    <h2 data-i18n="uploadDocuments">Upload Documents</h2>
                     <div id="documentSection">
-                        <!-- Dynamically Populated Document Fields -->
+                        <!-- Document fields dynamically populated here -->
                     </div>
-                    <button type="button" class="btn prev-btn">Back</button>
-                    <button type="button" class="btn next-btn">Next</button>
+                    <button type="button" class="btn prev-btn" data-i18n="backButton">Back</button>
+                    <button type="button" class="btn next-btn" data-i18n="nextButton">Next</button>
                 </div>
-
-                <!-- Step 3: Review & Submit -->
                 <div class="form-step">
                     <h2>Review & Submit</h2>
-                    <p class="review-text">Please review your details before submission.</p>
-                    <button type="button" class="btn prev-btn">Back</button>
-                    <button type="submit" class="btn submit-btn">Submit</button>
+                    <p>Review your details and documents before submission.</p>
+                    <div id="reviewDetails">
+                        <!-- Review details dynamically populated here -->
+                    </div>
+                    <button type="button" class="btn prev-btn" data-i18n="backButton">Back</button>
+                    <button type="submit" class="btn" data-i18n="submitButton">Submit</button>
                 </div>
             </form>
         </div>
     </main>
-
     <footer class="footer">
         <p>&copy; 2024 Baker McKenzie. All rights reserved.</p>
     </footer>
-
-    <script defer src="script.js"></script>
-    <script>
-        function redirectToReview(event) {
-            event.preventDefault(); // Prevent default form submission
-            console.log("Redirecting to review.html...");
-            window.location.href = "review.html"; // Redirect to the review page
-        }
-    </script>
 </body>
 </html>

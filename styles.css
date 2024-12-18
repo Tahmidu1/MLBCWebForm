@@ -18,7 +18,7 @@ body {
 
 header.header {
     background: linear-gradient(90deg, #1d3557, #457b9d);
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     color: white;
     display: flex;
     align-items: center;
@@ -26,22 +26,44 @@ header.header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+header.header .logo {
+    width: 70px; /* Larger logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header.header .logo-text {
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold;
+    flex: 1; /* Push text to the center */
+    text-align: center; /* Center align text */
+    margin: 0;
+}
+
+header.header .language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between label and dropdown */
+    font-size: 1rem; /* Consistent font size */
+}
+
+
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
     display: flex;
     align-items: center;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin-right: 1rem;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: white;
 }
@@ -52,7 +74,7 @@ main.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 3rem 1rem;
     background: linear-gradient(to right, #f8f9fa, #ffffff);
 }
 
@@ -61,10 +83,94 @@ main.form-container {
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     padding: 3rem;
-    max-width: 700px;
+    max-width: 850px; /* Increased max-width */
     width: 100%;
     animation: fadeIn 1s ease-in-out;
 }
+.admin-container {
+    display: grid;
+    gap: 2rem; /* Space between sections */
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.admin-container {
+    display: grid;
+    gap: 2rem; /* Space between sections */
+    padding: 2rem;
+    width: 100%; /* Full width */
+    max-width: none; /* Remove width restriction */
+    margin: 0 auto;
+    background: none; /* Transparent background to blend with the page */
+}
+
+
+#reviewDetails {
+    margin-bottom: 2rem;
+}
+
+#reviewDetails h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1d3557;
+}
+
+#reviewDetails p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+#documentList li {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+}
+
+
+#documentList div {
+    background: #f9f9f9;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#submissions-list li {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+#addDocument {
+    margin-top: 1rem;
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#addDocument:hover {
+    background: #21867a;
+}
+
 
 /* Progress Bar */
 .progress-bar {
@@ -78,17 +184,17 @@ main.form-container {
 .progress-bar:before {
     content: '';
     position: absolute;
-    top: 14px;
+    top: 20px;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 3px; /* Made the bar thicker */
     background: #ddd;
     z-index: 0;
 }
 
 .progress-step {
-    width: 40px;
-    height: 40px;
+    width: 50px; /* Slightly larger steps */
+    height: 50px;
     background: #e0e0e0;
     border-radius: 50%;
     display: flex;
@@ -103,9 +209,10 @@ main.form-container {
 .progress-step:before {
     content: attr(data-title);
     position: absolute;
-    top: 50px;
-    font-size: 12px;
+    top: 60px; /* Adjusted for larger steps */
+    font-size: 14px;
     color: #666;
+    text-align: center;
 }
 
 .progress-step-active {
@@ -124,25 +231,27 @@ main.form-container {
 
 .form-step-active {
     display: block;
+    text-align: center; /* Center text */
 }
 
 .input-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem; /* Added more spacing */
     animation: slideIn 0.5s ease-out;
+    text-align: left;
 }
 
 .input-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #333;
 }
 
 .input-group input,
 .input-group select {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.9rem; /* Increased padding for inputs */
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: 0.3s ease;
@@ -157,13 +266,13 @@ main.form-container {
 }
 
 .input-group input[type="file"] {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.6rem;
+    font-size: 1rem;
 }
 
 /* Buttons */
 .btn {
-    padding: 0.8rem 2rem;
+    padding: 1rem 2.5rem;
     background: #1d3557;
     color: white;
     border: none;
@@ -226,56 +335,90 @@ footer.footer {
     }
 }
 
-/* Admin Dashboard */
-.admin-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 2rem;
+        max-width: 100%; /* Adjust form width on smaller screens */
+    }
+
+    .progress-bar:before {
+        top: 16px; /* Adjust bar position for smaller screens */
+    }
+
+    .progress-step {
+        width: 40px;
+        height: 40px;
+    }
+
+    .progress-step:before {
+        top: 50px;
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header.header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .progress-step:before {
+        font-size: 10px;
+    }
+}
+.admin-container, .review-container {
+    padding: 1rem;
+    box-shadow: none; /* Simplify for smaller screens */
+}
+
+#documentList div, #submissions-list li, #documentList li {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+}
+
+header.header {
+    text-align: center;
+    gap: 1rem;
+}
+
+.language-selector {
+    justify-content: center;
+}
+.manage-documents,
+.submitted-forms {
+    width: 100%; /* Stretch to container width */
+    max-width: 100%; /* Remove internal restriction */
+    background: white; /* Optional: Keep contrast with the background */
     padding: 2rem;
-    background: #f8f9fa;
-}
-
-#document-section {
-    margin: 1.5rem 0;
-    background: #fff;
-    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Consistent styling */
 }
+@media (max-width: 768px) {
+    header.header {
+        flex-wrap: wrap;
+        justify-content: center; /* Center everything */
+        gap: 1rem;
+    }
 
-#document-section div {
-    margin-bottom: 1rem;
-}
+    .logo-text {
+        font-size: 1.8rem; /* Slightly smaller text */
+        margin: 0 auto; /* Center align */
+    }
 
-#submissions-list {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-#submissions-list li {
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-#add-document {
-    display: inline-block;
-    margin-top: 1rem;
-    background: #457b9d;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-#add-document:hover {
-    background: #2a9d8f;
+    .language-selector {
+        justify-content: center;
+        font-size: 0.9rem; /* Adjust font size */
+    }
 }
 /* Start Page Styles */
 .contract-container {
