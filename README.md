@@ -42,7 +42,7 @@ Start the Backend Server:
 From the Backend-server directory, run**:
 
    ```bash
-   #npm start
+   npm start
    
 This will launch the backend server, typically accessible at http://localhost:3000.
 
