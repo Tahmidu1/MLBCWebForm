@@ -6,6 +6,7 @@
     <title>Admin Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
     <script defer src="admin.js"></script>
 </head>
 <body>
@@ -13,31 +14,48 @@
         <div class="container flex justify-between items-center">
             <img src="BM Logo.jpg" alt="Logo" class="logo">
             <h1 class="logo-text">Admin Dashboard</h1>
+            <div class="language-selector">
+                <label for="languageDropdown">Language:</label>
+                <select id="languageDropdown">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </div>
         </div>
     </header>
-
-    <main class="form-container">
-        <div class="form-wrapper">
-            <h2>Manage Documents</h2>
-            <div class="admin-controls">
-                <label for="clientType">Select Client Type:</label>
-                <select id="clientType">
-                    <option value="Individual">Individual</option>
-                    <option value="Company">Company</option>
-                    <option value="Trust">Trust</option>
-                </select>
-
-                <input type="text" id="newDocumentName" placeholder="Enter new document name">
-                <button id="addDocument" class="btn">Add Document</button>
+    <main class="admin-container">
+        <section class="manage-documents">
+            <h2 data-i18n="manageDocuments">Manage Required Documents</h2>
+            <label for="clientType" data-i18n="selectClientType">Select Client Type:</label>
+            <select id="clientType">
+                <option value="Individual">Individual</option>
+                <option value="Company">Company</option>
+                <option value="Trust">Trust</option>
+            </select>
+            <div>
+                <input type="text" id="newDocumentName" placeholder="Enter a new document name" data-i18n="newDocumentPlaceholder">
+                <button id="addDocument" class="btn" data-i18n="addDocument">Add Document</button>
             </div>
-
-            <h3>Current Documents</h3>
+            <h3 data-i18n="currentDocuments">Current Required Documents</h3>
             <div id="documentList">
-                <!-- Dynamically generated document list will appear here -->
+                <!-- Dynamically populated document list will appear here -->
             </div>
-        </div>
-    </main>
+        </section>
 
+        <section class="submitted-forms">
+            <h2 data-i18n="submittedForms">Submitted Forms</h2>
+            <ul id="submissions-list">
+                <!-- Submissions fetched from the backend will appear here -->
+            </ul>
+        </section>
+
+        <section class="admin-actions">
+            <h2 data-i18n="actions">Actions</h2>
+            <button id="exportData" class="btn" data-i18n="exportData">Export Data</button>
+        </section>
+    </main>
     <footer class="footer">
         <p>&copy; 2024 Admin Dashboard. All rights reserved.</p>
     </footer>

@@ -1,0 +1,16 @@
+{
+  "Individual": [
+    "Passport",
+    "Bank Statement",
+    "test"
+  ],
+  "Company": [
+    "Company Registration",
+    "Financial Report",
+    "example"
+  ],
+  "Trust": [
+    "Trust Deed",
+    "Beneficiary List"
+  ]
+}
