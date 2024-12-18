@@ -46,7 +46,7 @@ From the Backend-server directory, run**:
 This will launch the backend server, typically accessible at http://localhost:3000.
 
 3. **Access the Frontend**:
-- Open the start.html file located in the root directory of the project in your preferred web browser to interact with the application.
+- Open the **start.html** file located in the root directory of the project in your preferred web browser to interact with the application.
 
 
 ## Project Structure
