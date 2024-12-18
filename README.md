@@ -28,6 +28,8 @@ Before setting up the project, ensure you have the following installed:
 
    Install Dependencies:
 
+## How to run the program
+
 First step to run:
 Navigate to the Backend-server directory and install the necessary packages:
 
@@ -44,13 +46,13 @@ Access the Frontend:
 Open the start.html file located in the root directory of the project in your preferred web browser to interact with the application.
 
 
-#Project Structure
+## Project Structure
 Backend-server/: Contains the backend server code.
 start.html: Entry point for the user-facing application.
 admin.html: Interface for administrative review of submissions.
 styles.css: Stylesheet for the application's frontend.
 script.js: JavaScript functionalities for the frontend.
 
-#Contributing
+## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your proposed changes.
 
