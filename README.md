@@ -50,11 +50,11 @@ Open the start.html file located in the root directory of the project in your pr
 
 
 ## Project Structure
-Backend-server/: Contains the backend server code.
-start.html: Entry point for the user-facing application.
-admin.html: Interface for administrative review of submissions.
-styles.css: Stylesheet for the application's frontend.
-script.js: JavaScript functionalities for the frontend.
+- **Backend-server/**: Contains the backend server code.
+- **start.html**: Entry point for the user-facing application.
+- **admin.html**: Interface for administrative review of submissions.
+- **styles.css**: Stylesheet for the application's frontend.
+- **script.js**: JavaScript functionalities for the frontend.
 
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your proposed changes.
