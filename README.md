@@ -31,15 +31,19 @@ Before setting up the project, ensure you have the following installed:
 ## How to run the program
 
 First step to run:
-Navigate to the Backend-server directory and install the necessary packages:
+1. **Navigate to the Backend-server directory and install the necessary packages**:
 
-cd Backend-server
-npm install
+   ```bash
+   cd Backend-server
+   npm install
 
-Second and final step - Running the Application
+2. **Running the Application
 Start the Backend Server:
-From the Backend-server directory, run:
-#npm start
+From the Backend-server directory, run**:
+
+   ```bash
+   #npm start
+   
 This will launch the backend server, typically accessible at http://localhost:3000.
 
 Access the Frontend:
